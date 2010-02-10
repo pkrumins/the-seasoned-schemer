@@ -28,17 +28,17 @@ Chapter 11 welcomes you back to Scheme. It starts with a problem of
 determining whether any atom occurs twice in a row. Next a problem of finding
 the running sum of a list of numbers is solved.
 
-From the solutions of these two problems the eleventh commandment is coined.
+From the solutions of these two problems the 11th commandment is postulated:
 
 .----------------------------------------------------------------------------.
 | The eleventh commandment:                                                  |
 |                                                                            |
 | Use additional arguments when a function needs to know what the other      |
-|  arguments to the function have been like so far.                          |
+| arguments to the function have been like so far.                           |
 '----------------------------------------------------------------------------'
 
-Next the scramble problem is presented. The problem is stated INCORRECTLY and
-will confuse you.
+The chapter ends with the scramble problem. The problem is stated INCORRECTLY
+and will confuse you.
 
 It says "The result at each position is found by counting backward from the
 current position to this index."
