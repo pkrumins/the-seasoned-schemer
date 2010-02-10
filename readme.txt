@@ -1,5 +1,5 @@
 This repository contains all the code examples from the book "The Seasoned
-Schemer." "The Seasoned Schemer" is a continuation of "The Little Schemer"
+Schemer." "The Seasoned Schemer" is the continuation of "The Little Schemer"
 (http://bit.ly/4GjWdP) book. It's written in the same style as "The Little
 Schemer", i.e., as a dialogue between you and the authors of the book, but the
 goal is different - it teaches you to think about the nature of computation.
@@ -22,6 +22,30 @@ Table of contents:
 
 [11]-Chapter-11-Welcome-Back-to-the-Show--------------------------------------
 
+See 11-welcome-back-to-the-show.ss file for code examples.
+
+Chapter 11 welcomes you back to Scheme. It starts with a problem of
+determining whether any atom occurs twice in a row. Next a problem of finding
+the running sum of a list of numbers is solved.
+
+From the solutions of these two problems the eleventh commandment is coined.
+
+.----------------------------------------------------------------------------.
+| The eleventh commandment:                                                  |
+|                                                                            |
+| Use additional arguments when a function needs to know what the other      |
+|  arguments to the function have been like so far.                          |
+'----------------------------------------------------------------------------'
+
+Next the scramble problem is presented. The problem is stated INCORRECTLY and
+will confuse you.
+
+It says "The result at each position is found by counting backward from the
+current position to this index."
+
+What it should say is this: "The result at each position is found by counting
+backward from the NEXT position to this index." Or in other words:
+a'_{i} = a{i+1 - a_{i}}.
 
 
 ------------------------------------------------------------------------------
