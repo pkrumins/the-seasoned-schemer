@@ -16,6 +16,8 @@ His blog is at http://www.catonmat.net  --  good coders code, great reuse.
 Table of contents:
     [11] Chapter 11: Welcome Back to the Show
          11-welcome-back-to-the-show.ss
+    [12] Chapter 12: Take Cover
+         12-take-cover.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -47,6 +49,34 @@ What it should say is this: "The result at each position is found by counting
 backward from the NEXT position to this index." Or in other words:
 a'_{i} = a{i+1 - a_{i}}.
 
+
+[12]-Chapter-12-Take-Cover----------------------------------------------------
+
+See 12-take-cover.ss file for code examples.
+
+Chapter 12 introduces the letrec feature of Scheme that allows to remove
+arguments that do not change for recursive applications and which hides and
+protects functions (creates local scope).
+
+Many examples are shows to make it clear how letrec works. Two commandments
+are stated:
+
+.----------------------------------------------------------------------------.
+| The twelfth commandment                                                    |
+|                                                                            |
+| Use (letrec ...) to remove arguments that do not change for recursive      |
+| applications.                                                              |
+'----------------------------------------------------------------------------'
+
+And
+
+.----------------------------------------------------------------------------.
+| The thirteenth commandment                                                 |
+|                                                                            |
+| Use (letrec ...) to hide and to protect functions.                         |
+'----------------------------------------------------------------------------'
+
+Now it's time for dessert.
 
 ------------------------------------------------------------------------------
 
