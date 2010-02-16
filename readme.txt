@@ -18,6 +18,8 @@ Table of contents:
          11-welcome-back-to-the-show.ss
     [12] Chapter 12: Take Cover
          12-take-cover.ss
+    [13] Chapter 13: Hop, Skip, and Jump
+         13-hop-skip-and-jump.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -77,6 +79,24 @@ And
 '----------------------------------------------------------------------------'
 
 Now it's time for dessert.
+
+
+[13]-Chapter-13-Hop-Skip-and-Jump---------------------------------------------
+
+See 13-hop-skip-and-jump.ss file for code examples.
+
+Chapter 13 teaches how to return values from functions abruptly and promptly
+via letcc (aka. call-with-current-continuation).
+
+.----------------------------------------------------------------------------.
+| The fourteenth commandment                                                 |
+|                                                                            |
+| Use (letcc ...) to return values abruptly and prompty.                     |
+'----------------------------------------------------------------------------'
+
+This chapter revisits intersect and intersectall functions from The Little
+Schemer and rewrites them by applying 12th, 13th and 14th commandments.
+
 
 ------------------------------------------------------------------------------
 
