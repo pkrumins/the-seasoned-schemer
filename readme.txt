@@ -20,6 +20,8 @@ Table of contents:
          12-take-cover.ss
     [13] Chapter 13: Hop, Skip, and Jump
          13-hop-skip-and-jump.ss
+    [14] Chapter 14: Let There Be Names
+         14-let-there-be-names.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -96,6 +98,35 @@ via letcc (aka. call-with-current-continuation).
 
 This chapter revisits intersect and intersectall functions from The Little
 Schemer and rewrites them by applying 12th, 13th and 14th commandments.
+
+
+[14]-Chapter-14-Let-There-Be-Names--------------------------------------------
+
+See 14-let-there-be-names.ss file for code examples.
+
+Chapter 14 introduces the (let ...) expression that is used to give
+expressions names and to avoid evaluating them twice.
+
+The usage of let is first stated as a preliminary version of fifteenth
+commandment:
+
+.----------------------------------------------------------------------------.
+| The fifteenth commandment (preliminary version)                            |
+|                                                                            |
+| Use (let ...) to name the values of repeated expressions.                  |
+'----------------------------------------------------------------------------'
+
+And as more examples are worked through, as a revised edition:
+
+.----------------------------------------------------------------------------.
+| The fifteenth commandment (revised version)                                |
+|                                                                            |
+| Use (let ...) to name the values of repeated expressions in a function     |
+| definition if they may be evaluated twice for one and the same use of the  |
+| function.                                                                  |
+'----------------------------------------------------------------------------'
+
+The final version of the fifteenth commandment is yet to come.
 
 
 ------------------------------------------------------------------------------
