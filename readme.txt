@@ -22,6 +22,8 @@ Table of contents:
          13-hop-skip-and-jump.ss
     [14] Chapter 14: Let There Be Names
          14-let-there-be-names.ss
+    [15] Chapter 15: The Difference Between Men and Boys...
+         15-men-and-boys.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -127,6 +129,36 @@ And as more examples are worked through, as a revised edition:
 '----------------------------------------------------------------------------'
 
 The final version of the fifteenth commandment is yet to come.
+
+
+[15]-Chapter-15-The-Difference-Between-Men-and-Boys---------------------------
+
+See 15-men-and-boys.ss file for code examples.
+
+Chapter 15 teaches you how to use the (set! ...) expression and how to let
+functions remember values.
+
+It presents three commandments:
+
+.----------------------------------------------------------------------------.
+| The sixteenth commandment                                                  |
+|                                                                            |
+| Use (set! ...) only with names defined in (let ...)s.                      |
+|                                                                            |
+'----------------------------------------------------------------------------'
+
+.----------------------------------------------------------------------------.
+| The seventeenth commandment (preliminary version)                          |
+|                                                                            |
+| Use (set! ...) for (let ((x ...)) ...) only if there is at least one       |
+| (lambda ... between it and the (let ((x ...)) ...).                        |
+'----------------------------------------------------------------------------'
+
+.----------------------------------------------------------------------------.
+| The eighteenth commandment                                                 |
+|                                                                            |
+| Use (set! x ...) only when the value that x refers to is no longer needed. |
+'----------------------------------------------------------------------------'
 
 
 ------------------------------------------------------------------------------
