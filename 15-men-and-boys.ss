@@ -54,7 +54,6 @@
 
 (omnivore 'bouillabaisse)   ; '(bouillabaisse bouillabaisse)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                            ;
 ; The sixteenth commandment                                                  ;
@@ -88,9 +87,42 @@
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(define chez-nous
+  (lambda ()
+    (let ((a food))
+      (set! food x)
+      (set! x a))))
+
+(define food 'none)
+
+(define glutton
+  (lambda (x)
+    (set! food x)
+    (cons 'more
+          (cons x
+                (cons 'more
+                      (cons x
+                            '()))))))
+(dinerR 'milk)
+(glutton 'cream)
+
+; x is milk
+; food is cream
+
+x
+food
+
+(chez-nous) ; x is now cream, food is now milk
+
+x
+food
+
+(chez-nous) ; x is now milk, food is now cream
+
+x
+food
 
 ; There is more stuff in the book
-
 
 ;
 ; Go get yourself this wonderful book and have fun with the Scheme language!
