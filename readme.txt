@@ -24,6 +24,8 @@ Table of contents:
          14-let-there-be-names.ss
     [15] Chapter 15: The Difference Between Men and Boys...
          15-men-and-boys.ss
+    [16] Chapter 16: Ready, Set, Bang!
+         16-ready-set-bang.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -158,6 +160,37 @@ It presents three commandments:
 | The eighteenth commandment                                                 |
 |                                                                            |
 | Use (set! x ...) only when the value that x refers to is no longer needed. |
+'----------------------------------------------------------------------------'
+
+
+[16]-Chapter-16-Ready-Set-Bang!-----------------------------------------------
+
+See 16-ready-set-bang.ss file for code examples.
+
+Chapter 16 plays a lot around creating state variables via set!. A state
+variable remembers its value between two distinct function calls.
+
+The nineteenth commandment follows:
+
+.----------------------------------------------------------------------------.
+| The nineteenth commandment                                                 |
+|                                                                            |
+| Use (set! ...) to remember valuable things between two distinct uses of a  |
+| function.                                                                  |
+'----------------------------------------------------------------------------'
+
+Then we return to Y-combinators again. The Y! (Y-bang) combinator is
+introduced that's "the applicative-order, imperative Y combinator. It works
+almost like the regular Y-combinator, but not quite.
+
+The final version of the seventeenth commandment is presented:
+
+.----------------------------------------------------------------------------.
+| The seventeenth commandment (final version)                                |
+|                                                                            |
+| Use (set! x ...) for (let ((x ...)) ...) only if there is at least one     |
+| (lambda ... between it and the (let ...), or if the new value for x is a   |
+| function that refers to x                                                  |
 '----------------------------------------------------------------------------'
 
 
