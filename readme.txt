@@ -26,6 +26,8 @@ Table of contents:
          15-men-and-boys.ss
     [16] Chapter 16: Ready, Set, Bang!
          16-ready-set-bang.ss
+    [17] Chapter 17: We Change, Therefore We Are!
+         17-we-change-therefore-we-are.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -192,6 +194,17 @@ The final version of the seventeenth commandment is presented:
 | (lambda ... between it and the (let ...), or if the new value for x is a   |
 | function that refers to x                                                  |
 '----------------------------------------------------------------------------'
+
+
+[17]-Chapter-15-We-Change-Therefore-We-Are------------------------------------
+
+See 17-we-change-therefore-we-are.ss file for code examples.
+
+Chapter 17 continues to improve the paranthesis pizza wrapping function and
+still teaches how to use set! and let correctly.
+
+It also looks at how to count the number of cons calls in a function by using
+set!.
 
 
 ------------------------------------------------------------------------------
