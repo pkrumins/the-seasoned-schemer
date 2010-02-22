@@ -28,6 +28,8 @@ Table of contents:
          16-ready-set-bang.ss
     [17] Chapter 17: We Change, Therefore We Are!
          17-we-change-therefore-we-are.ss
+    [18] Chapter 18: We Change, Therefore We Are The Same!
+         18-we-change-therefore-we-are-the-same.ss
     ...
     work in progress, adding new chapters every other day
 
@@ -205,6 +207,14 @@ still teaches how to use set! and let correctly.
 
 It also looks at how to count the number of cons calls in a function by using
 set!.
+
+
+[18]-Chapter-18-We-Change-Therefore-We-Are-The-Same---------------------------
+
+See 18-we-change-therefore-we-are-the-same.ss file for code examples.
+
+Chapter 18 implements car, cdr and cons through lambdas. It also talks about
+what it means for two lists to be equal.
 
 
 ------------------------------------------------------------------------------
