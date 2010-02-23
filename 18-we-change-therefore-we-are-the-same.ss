@@ -178,15 +178,95 @@
 ;
 (define dozen (lots 12))
 
-dozen           ; (egg egg egg egg egg egg egg egg egg egg egg egg)
-
-(counter)       ; 0, because no calls to consC
+dozen           ; '(egg egg egg egg egg egg egg egg egg egg egg egg)
+                ; used 12 conses
 
 (define bakers-dozen (add-at-end dozen))
 
-bakers-dozen
+bakers-dozen    ; '(egg egg egg egg egg egg egg egg egg egg egg egg egg-end)
+                ; used 13 conses (25 total now)
 
-(counter)       ; 12  ;;; why 12? should be 13...
+(define bakers-dozen-too (add-at-end-too dozen))
+
+bakers-dozen-too    ; '(egg egg egg egg egg egg egg egg egg egg egg egg egg-end egg-end2)
+                    ; used 1 cons (26 total)
+
+(define bakers-dozen-again (add-at-end dozen))
+
+bakers-dozen-again  ; '(egg egg egg egg egg egg egg egg egg egg egg egg egg-end egg-end2 egg-end)
+                    ; used 14 conses (40 total)
+
+(define same?
+  (lambda (c1 c2)
+    (cond
+      ((and (null? c1) (null? c2)) #t)
+      ((or (null? c1) (null? c2)) #f)
+      (else
+       (let ((t1 (cdr c1))
+             (t2 (cdr c2)))
+         (set-cdr! c1 1)
+         (set-cdr! c2 2)
+         (let ((v (= (cdr c1) (cdr c2))))
+           (set-cdr! c1 t1)
+           (set-cdr! c2 t2)
+           v))))))
+
+(same? dozen dozen)                     ; #t
+(same? dozen bakers-dozen)              ; #f
+(same? dozen bakers-dozen-too)          ; #t
+(same? dozen bakers-dozen-again)        ; #f
+(same? bakers-dozen bakers-dozen-too)   ; #f   ;;; the book says #t???
+
+; The last-kons function returns the last cons in a non-empty kons-list
+;
+(define last-kons
+  (lambda (ls)
+    (cond
+      ((null? (cdr ls)) ls)
+      (else (last-kons (cdr ls))))))
+
+(define long (lots 12))                 ; '(egg egg egg egg egg egg egg egg egg egg egg egg)
+
+(set-cdr! (last-kons long) long)        ; #0 = '(egg egg egg egg egg egg egg egg egg egg egg . #0#) 
+
+; The finite-lenkth function returns length of a list
+; or #f if it's an infinite list
+;
+(define finite-lenkth
+  (lambda (p)
+    (call-with-current-continuation
+      (lambda (infinite)
+        (letrec
+          ((C (lambda (p q)
+                (cond
+                  ((same? p q) (infinite #f))
+                  ((null? q) 0)
+                  ((null? (cdr q)) 1)
+                  (else
+                    (+ (C (sl p) (qk q)) 2)))))
+           (qk (lambda (x) (cdr (cdr x))))
+           (sl (lambda (x) (cdr x))))
+          (cond
+            ((null? p) 0)
+            (else
+              (add1 (C p (cdr p))))))))))
+
+; Examples of finite-lenkth
+;
+(define not-so-long (lots 5))         ; '(egg egg egg egg egg)
+(finite-lenkth not-so-long)           ; 5
+(finite-lenkth long)                  ; #f
+
+; Guy's Favorite Pie
+;
+(define mongo
+  (cons 'pie
+   (cons 'a
+    (cons 'la
+     (cons 'mode '())))))
+(set-cdr! (cdr (cdr (cdr mongo))) (cdr mongo))
+
+; mongo
 
 ;
 ; Go get yourself this wonderful book and have fun with the Scheme language!
