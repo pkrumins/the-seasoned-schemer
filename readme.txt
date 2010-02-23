@@ -30,8 +30,10 @@ Table of contents:
          17-we-change-therefore-we-are.ss
     [18] Chapter 18: We Change, Therefore We Are The Same!
          18-we-change-therefore-we-are-the-same.ss
-    ...
-    work in progress, adding new chapters every other day
+    [19] Chapter 19: Absconding with the Jewels
+         19-jewels.ss
+    [20] Chapter 20: What's in Store?
+         20-whats-in-store.ss
 
 
 [11]-Chapter-11-Welcome-Back-to-the-Show--------------------------------------
@@ -198,7 +200,7 @@ The final version of the seventeenth commandment is presented:
 '----------------------------------------------------------------------------'
 
 
-[17]-Chapter-15-We-Change-Therefore-We-Are------------------------------------
+[17]-Chapter-17-We-Change-Therefore-We-Are------------------------------------
 
 See 17-we-change-therefore-we-are.ss file for code examples.
 
@@ -214,7 +216,24 @@ set!.
 See 18-we-change-therefore-we-are-the-same.ss file for code examples.
 
 Chapter 18 implements car, cdr and cons through lambdas. It also talks about
-what it means for two lists to be equal.
+what it means for two lists to be equal and introduces set-cdr! function.
+
+
+[19]-Chapter-19-Absconding-with-the-Jewels------------------------------------
+
+See 19-jewels.ss file for code examples.
+
+Chapter 19 talks more about continuations and teaches how to use them to
+create a generator get-next that yields one value on each function call.
+
+
+[20]-Chapter-20-What's-in-Store?----------------------------------------------
+
+See 20-whats-in-store.ss file for code examples.
+
+... Going to write about it after I finish assembling code examples from The
+Little Schemer, as it's based on knowledge of Chapter 10 of The Little
+Schemer.
 
 
 ------------------------------------------------------------------------------
